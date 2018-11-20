@@ -1,0 +1,110 @@
+.direct-speech {
+    color: var(--direct-speech-color);
+    font-style: var(--direct-speech-font-style);
+}
+#header {
+    text-transform: uppercase;
+    text-decoration: underline double red;
+    text-align: center;
+    border-bottom: 2px dotted blue;
+    margin-left: -10px;
+}
+#part1,
+#part2,
+#part3 {
+    text-shadow: var(--part-text-shadow);
+    text-align: var(--part-text-align);
+}
+p {
+    text-indent: var(--p-text-indent);
+    text-align: justify;
+}
+* {
+    font-family: var(--global-font-family);
+}
+#contents {
+    list-style: var(--contents-list-style);
+    text-transform: uppercase;
+    padding-left: 1.2em;
+    font-size: 90%; 
+}
+a {
+    text-decoration:none; 
+}
+a:link {
+    color: var(--link-color);
+}
+a:visited {
+    color: var(--visited-color);
+}
+p:hover {
+    border-left: var(--p-border-left);
+}
+img {
+   width: var(--img-width);
+}
+h1, h2, img {
+    margin: var(--imgh-margin);
+}
+h1:hover::before, h2:hover::before {
+    content: "#";
+    color: pink;
+}
+h2+p::first-letter {
+    background-color: var(--first-letter-background-color);
+    font-style: var(--first-letter-font-style);
+    font-size: var(--first-letter-font-size);
+}
+::selection {
+    color: var(--selection-color);
+    background-color: var(--selection-background-color);
+}
+#contents-block {
+    width: var(--contents-block-width);
+    position: var(--contents-block-position);
+    top: var(--contents-block-top);
+    border-bottom: var(--contents-block-border-bottom);
+    z-index: 1;
+}
+#part1, #part2, #part3 {
+    position: sticky;
+    top: 0;
+    padding-left: 10px;
+    border-bottom: var(--part-border-bottom);
+    background-color: rgba(255, 255, 255, 80%);
+    margin-left: -10px;
+}
+p:not([class="direct-speech"])::first-line {
+    font-style: italic;
+}
+#story {
+    padding-left: 10px;
+    margin-left: var(--story-margin-left);
+    border-left: var(--story-border-left); 
+}
+:root {
+    --direct-speech-color: violet;
+    --direct-speech-font-style: italic;
+    --part-text-shadow: 5pt 5px 3pt red;
+    --part-text-align: center;
+    --p-text-indent: 1.5em;
+    --global-font-family: Arial;
+    --contents-list-style: square;
+    --link-color: red;
+    --visited-color: green;
+    --p-border-left: 4px solid yellow;
+    --img-width: 100%;
+    --imgh-margin: 20px 0px;
+    --first-letter-background-color: orange;
+    --first-letter-font-style: italic;
+    --first-letter-font-size: 1.5em;
+    --selection-color: red;
+    --selection-background-color: blue;
+    --story-margin-left: 140px;
+    --contents-block-width: 8.7rem;
+    --contents-block-top: 40%;
+    --contents-block-position: fixed;
+    --contents-block-border-bottom: 2px dotted blue;
+    --part-border-bottom: 2px dotted blue;
+    --story-border-left: 2px dotted blue; 
+}
